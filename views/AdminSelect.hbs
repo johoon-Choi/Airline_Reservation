@@ -1,0 +1,52 @@
+<h1>{{ title1 }}</h1>
+
+<table>
+    <tr>
+        <td>Airport_code</td>
+        <td>Name</td>
+        <td>City</td>
+        <td>State</td>
+    </tr>
+    {{#each AIRPORT}}
+    <tr>
+        <td>{{Airport_code}}</td>
+        <td>{{Name}}</td>
+        <td>{{City}}</td>
+        <td>{{State}}</td>
+    </tr>
+    {{/each}}
+</table>
+
+<h1>{{ title2 }}</h1>
+
+<table>
+    <tr>
+        <td>Airplane_id</td>
+        <td>Total_number_of_seats</td>
+        <td>Airplane_type</td>
+    </tr>
+    {{#each AIRPLANE}}
+    <tr>
+        <td>{{Airplane_id}}</td>
+        <td>{{Total_number_of_seats}}</td>
+        <td>{{Airplane_type}}</td>
+    </tr>
+    {{/each}}
+</table>
+
+<h1>{{ title3 }}</h1>
+
+<table>
+    <tr>
+        <td>Flight_number</td>
+        <td>Airline</td>
+        <td>Weekdays</td>
+    </tr>
+    {{#each FLIGHT}}
+    <tr>
+        <td>{{Flight_number}}</td>
+        <td>{{Airline}}</td>
+        <td>{{Weekdays}}</td>
+    </tr>
+    {{/each}}
+</table>

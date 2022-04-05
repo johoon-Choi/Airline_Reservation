@@ -1,0 +1,33 @@
+<h1>{{ title }}</h1>
+<table>
+  <tr>
+    <td>Flight_number</td>
+    <td>Leg_number</td>
+    <td>Date</td>
+    <td>Seat_number</td>
+    <td>Customer_name</td>
+    <td>Customer_phone</td>
+  </tr>
+  {{#each SEAT_RESERVATIONS}}
+    <form method="post">
+      <tr>
+        <td>{{Flight_number}}</td>
+        <td>{{Leg_number}}</td>
+        <td>{{Date}}</td>
+        <td>{{Seat_number}}</td>
+        <td>{{Customer_name}}</td>
+        <td>{{Customer_phone}}</td>
+        <td style="border: none; margin-left: 10px;">
+          <button 
+            style="margin-left: 10px;"
+            type="submit" 
+            name="delBtn"
+            value={{Flight_number}}, {{Leg_number}}, {{Date}}, {{Seat_number}}
+            formaction="/CustomerDelete">
+          삭제
+          </button>
+        </td>
+      </tr>    
+    </form>
+  {{/each}}
+</table>

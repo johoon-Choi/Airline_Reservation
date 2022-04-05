@@ -1,0 +1,20 @@
+<h1>{{ title }}</h1>
+
+<table>
+    <tr>
+        <td>Airplane_id</td>
+        <td>Total_number_of_seats</td>
+        <td>Airplane_type</td>
+        <td>State</td>
+    </tr>
+    {{#each AIRPLANE_res}}
+        <form method="post">
+            <tr>
+                <td><input type="text" name="airplane_id" placeholder={{Airplane_id}}></td>
+                <td><input type="text" name="total_number_of_seats" placeholder={{Total_number_of_seats}}></td>
+                <td>{{Airplane_type}}</td>
+                <td><input type="submit" value="수정" formaction='/AdminUpdateAIRPLANE'></td>
+            </tr>
+        </form>
+    {{/each}}
+</table>

@@ -1,0 +1,29 @@
+<h1>{{ title }}</h1>
+<table>
+  <tr>
+    <td>Airport_code</td>
+    <td>Name</td>
+    <td>City</td>
+    <td>State</td>
+  </tr>
+  {{#each AIRPORT}}
+    <form method="post">
+      <tr>
+        <td>{{Airport_code}}</td>
+        <td>{{Name}}</td>
+        <td>{{City}}</td>
+        <td>{{State}}</td>
+        <td style="border: none; margin-left: 10px;">
+          <button 
+            style="margin-left: 10px;"
+            type="submit" 
+            name="delBtn"
+            value={{Airport_code}} 
+            formaction="/AdminDeleteAIRPORT">
+          삭제
+          </button>
+        </td>
+      </tr>    
+    </form>
+  {{/each}}
+</table>

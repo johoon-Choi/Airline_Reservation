@@ -1,0 +1,20 @@
+<h1>{{ title }}</h1>
+
+<table>
+    <tr>
+        <td>Flight_number</td>
+        <td>Airline</td>
+        <td>Weekdays</td>
+    </tr>
+    {{#each FLIGHT_res}}
+        <form method="post">
+            <tr>
+                <td><input type="text" name="flight_number" placeholder={{Flight_number}}></td>
+                <td>{{Airline}}</td>
+                <td><input type="text" name="weekdays" placeholder={{Weekdays}}></td>
+                <td><input type="submit" value="수정" formaction='/AdminUpdateFLIGHT'></td>
+            </tr>
+        </form>
+    {{/each}}
+</table>
+

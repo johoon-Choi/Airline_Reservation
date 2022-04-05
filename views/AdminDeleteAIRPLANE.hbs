@@ -1,0 +1,27 @@
+<h1>{{ title }}</h1>
+<table>
+  <tr>
+    <td>Airplane_id</td>
+    <td>Total_number_of_seats</td>
+    <td>Airplane_type</td>
+  </tr>
+  {{#each AIRPLANE}}
+    <form method="post">
+      <tr>
+        <td>{{Airplane_id}}</td>
+        <td>{{Total_number_of_seats}}</td>
+        <td>{{Airplane_type}}</td>
+        <td style="border: none; margin-left: 10px;">
+          <button 
+            style="margin-left: 10px;"
+            type="submit" 
+            name="delBtn"
+            value={{Airplane_id}} 
+            formaction="/AdminDeleteAIRPLANE">
+          삭제
+          </button>
+        </td>
+      </tr>    
+    </form>
+  {{/each}}
+</table>

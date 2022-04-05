@@ -1,0 +1,22 @@
+<h1>{{ title }}</h1>
+
+<table>
+    <tr>
+        <td>Flight_number</td>
+        <td>Leg_number</td>
+        <td>Date</td>
+        <td>Seat_number</td>
+        <td>Customer_name</td>
+        <td>Customer_phone</td>
+    </tr>
+    {{#each SEAT_RESERVATIONS}}
+    <tr>
+        <td>{{Flight_number}}</td>
+        <td>{{Leg_number}}</td>
+        <td>{{Date}}</td>
+        <td>{{Seat_number}}</td>
+        <td>{{Customer_name}}</td>
+        <td>{{Customer_phone}}</td>
+    </tr>
+    {{/each}}
+</table>
